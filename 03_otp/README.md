@@ -28,7 +28,7 @@ OTP는 동시성, 분산 시스템을 구축하기 위한 라이브러리와 설
 
 ### OTP 컴포넌트
 
-```
+```text
 Application
 └── Supervisor (감독자)
     ├── GenServer (상태 있는 서버)
@@ -519,7 +519,7 @@ Application.put_env(:my_app, :key, "value")
 
 ### Supervision Tree
 
-```
+```text
 MyApp.Supervisor
 ├── MyApp.Repo
 ├── Phoenix.PubSub

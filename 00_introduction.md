@@ -15,7 +15,8 @@
 
 ## Elixir란?
 
-Elixir는 **Erlang VM (BEAM)** 위에서 동작하는 함수형, 동시성 프로그래밍 언어입니다. 2011년 José Valim이 만들었으며, Ruby의 문법적 우아함과 Erlang의 견고함을 결합했습니다.
+Elixir는 **Erlang VM (BEAM)** 위에서 동작하는 함수형, 동시성 프로그래밍 언어입니다.
+2011년 José Valim이 만들었으며, Ruby의 문법적 우아함과 Erlang의 견고함을 결합했습니다.
 
 ### 왜 Elixir인가?
 
@@ -97,7 +98,8 @@ Supervisor.start_link(children, strategy: :one_for_one)
 
 ### 1. 점진적 타입 시스템 (Gradual Type System)
 
-Elixir 1.18에서 가장 큰 변화는 **타입 체킹**입니다. 명시적 타입 선언 없이도 컴파일 타임에 타입 오류를 감지합니다.
+Elixir 1.18에서 가장 큰 변화는 **타입 체킹**입니다.
+명시적 타입 선언 없이도 컴파일 타임에 타입 오류를 감지합니다.
 
 ```elixir
 defmodule Example do
@@ -112,6 +114,7 @@ Example.add("hello", 1)  # warning: incompatible types
 ```
 
 **타입 체킹 범위:**
+
 - 함수 호출 타입 체킹
 - 패턴 타입 추론
 - `case`, `cond`, `=` 에서 매칭 불가능한 절 감지
@@ -177,6 +180,7 @@ mix format --migrate
 ```
 
 **변환 예시:**
+
 - `'hello'` → `~c"hello"` (charlist를 시길로)
 - 비트스트링 수정자 괄호 정규화
 
@@ -196,16 +200,19 @@ mix format --migrate
 ### Windows
 
 **Chocolatey:**
+
 ```bash
 choco install elixir
 ```
 
 **Scoop:**
+
 ```bash
 scoop install elixir
 ```
 
 **WinGet:**
+
 ```bash
 winget install ElixirLang.Elixir
 ```
@@ -216,6 +223,7 @@ winget install ElixirLang.Elixir
 ### macOS
 
 **Homebrew:**
+
 ```bash
 brew install elixir
 ```
@@ -227,7 +235,8 @@ brew install elixir
 sudo apt-get install -y gnupg
 wget https://packages.erlang-solutions.com/ubuntu/erlang_solutions.asc
 sudo apt-key add erlang_solutions.asc
-echo "deb https://packages.erlang-solutions.com/ubuntu $(lsb_release -cs) contrib" | sudo tee /etc/apt/sources.list.d/erlang.list
+echo "deb https://packages.erlang-solutions.com/ubuntu $(lsb_release -cs) contrib" \
+  | sudo tee /etc/apt/sources.list.d/erlang.list
 
 # 설치
 sudo apt-get update
@@ -237,6 +246,7 @@ sudo apt-get install -y esl-erlang elixir
 ### 버전 관리자 (mise 또는 asdf)
 
 **mise (권장 - 더 빠름):**
+
 ```bash
 # mise 설치
 curl https://mise.run | sh
@@ -247,6 +257,7 @@ mise use -g elixir@1.18.1-otp-27
 ```
 
 **asdf:**
+
 ```bash
 # 플러그인 추가
 asdf plugin add erlang
@@ -393,6 +404,7 @@ IO.puts(JSON.encode!(data))
 ```
 
 실행:
+
 ```bash
 elixir hello.exs
 ```
@@ -467,8 +479,11 @@ mix phx.new my_web_app
 
 # Phoenix LiveView 전용
 mix phx.new my_app --live
+```
 
-# 프로젝트 구조
+프로젝트 구조:
+
+```text
 my_app/
 ├── lib/
 │   ├── my_app.ex

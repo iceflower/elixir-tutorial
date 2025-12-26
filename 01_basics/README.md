@@ -27,6 +27,7 @@ IO.puts("안녕하세요, Elixir 1.18!")
 ```
 
 실행:
+
 ```bash
 elixir hello.exs
 ```

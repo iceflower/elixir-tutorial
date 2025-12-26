@@ -6,7 +6,7 @@ Elixir 기초 문법부터 Phoenix 웹 프레임워크까지 단계별로 학습
 
 ## 프로젝트 구조
 
-```
+```text
 elixir-tutorial/
 ├── 00_introduction.md       # 📚 소개 및 설치
 ├── cheatsheet.md            # 📚 치트시트
@@ -23,21 +23,25 @@ elixir-tutorial/
 ### Elixir 설치
 
 **Windows (Chocolatey):**
+
 ```bash
 choco install elixir
 ```
 
 **Windows (Scoop):**
+
 ```bash
 scoop install elixir
 ```
 
 **macOS:**
+
 ```bash
 brew install elixir
 ```
 
 **설치 확인:**
+
 ```bash
 elixir --version
 iex   # Interactive Elixir 실행
@@ -72,16 +76,19 @@ iex   # Interactive Elixir 실행
 ## 예제 실행 방법
 
 ### 단일 파일 실행
+
 ```bash
 elixir 01_basics/01_hello_world.exs
 ```
 
 ### Interactive Shell에서 실행
+
 ```bash
 iex 01_basics/01_hello_world.exs
 ```
 
 ### Plug 웹서버 실행
+
 ```bash
 cd 04_plug_server
 mix deps.get

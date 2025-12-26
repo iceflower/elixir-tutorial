@@ -98,7 +98,7 @@ http://localhost:4000 접속
 
 ### Phoenix 1.8 구조
 
-```
+```text
 my_app/
 ├── config/                 # 설정
 │   ├── config.exs         # 공통 설정
