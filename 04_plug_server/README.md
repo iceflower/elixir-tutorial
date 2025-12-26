@@ -22,10 +22,15 @@ Plug는 Elixir의 **웹 요청/응답 추상화**입니다. Phoenix의 기반이
 
 ### Plug란?
 
-```text
-요청 → [Plug] → [Plug] → [Plug] → 응답
-         ↓        ↓        ↓
-       로깅     인증      처리
+```mermaid
+flowchart LR
+    A[요청] --> B[Plug]
+    B --> C[Plug]
+    C --> D[Plug]
+    D --> E[응답]
+    B -.-> B1[로깅]
+    C -.-> C1[인증]
+    D -.-> D1[처리]
 ```
 
 모든 Plug는 `%Plug.Conn{}` 구조체를 받아서 변환합니다.

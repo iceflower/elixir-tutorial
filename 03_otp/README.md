@@ -28,14 +28,14 @@ OTP는 동시성, 분산 시스템을 구축하기 위한 라이브러리와 설
 
 ### OTP 컴포넌트
 
-```text
-Application
-└── Supervisor (감독자)
-    ├── GenServer (상태 있는 서버)
-    ├── GenServer
-    └── Supervisor
-        ├── Worker
-        └── Worker
+```mermaid
+graph TD
+    A[Application] --> B[Supervisor<br/>감독자]
+    B --> C[GenServer<br/>상태 있는 서버]
+    B --> D[GenServer]
+    B --> E[Supervisor]
+    E --> F[Worker]
+    E --> G[Worker]
 ```
 
 ---
@@ -519,14 +519,14 @@ Application.put_env(:my_app, :key, "value")
 
 ### Supervision Tree
 
-```text
-MyApp.Supervisor
-├── MyApp.Repo
-├── Phoenix.PubSub
-├── MyAppWeb.Endpoint
-│   ├── Phoenix.PubSub
-│   └── Phoenix.Endpoint.Server
-└── MyApp.Scheduler
+```mermaid
+graph TD
+    A[MyApp.Supervisor] --> B[MyApp.Repo]
+    A --> C[Phoenix.PubSub]
+    A --> D[MyAppWeb.Endpoint]
+    A --> E[MyApp.Scheduler]
+    D --> D1[Phoenix.PubSub]
+    D --> D2[Phoenix.Endpoint.Server]
 ```
 
 ---
